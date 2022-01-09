@@ -3,73 +3,51 @@
 #include <stdio.h>
 #include <string.h>
 
-#define DIGITS 100
+#define max(a, b) (((a) > (b)) ? (a) : (b))
+#define min(a, b) (((a) < (b)) ? (a) : (b))
 
-int mode = 0;
-
-void scanNum(char* num) {
-	char ch;
-	int i = 0;
-	while ((ch = getchar()) != '\n' && ch != '+' && ch != '-' && ch != EOF) {
-		num[i] = ch;
-		i++;
-	}
-	switch (ch) {
-	case '+':
-		mode = 1;
-		break;
-	case '-':
-		mode = 2;
-		break;
+int findDotsPos(char* num) {
+	int n = strlen(num);
+	for (int i = 0; i < n; i++) {
+		if (num[n - i - 1] == '.') return i;
 	}
 }
 
-void scanFromString(int *big, char* num) {
-	int i = DIGITS - 1;
-	int j = 0, n = strlen(num);
-	while (i >= n) big[i--] = 0;
-	while (i >= 0) big[i--] = num[j++] - '0';
-}
-
-void add(int* num1, int* num2) {
-	for (int i = 0; i < DIGITS; i++) {
-		num1[i] += num2[i];
-		num1[i + 1] += num1[i] / 10;
-		num1[i] %= 10;
-	}
-}
-
-void sub(int* num1, int* num2) {
-	for (int i = 0; i < DIGITS; i++) {
-		num1[i] -= num2[i];
-		if (num1[i] < 0) {
-			num1[i + 1] -= 1;
-			num1[i] += 10;
+void scanNumChar(char *num, int *big, int dots) {
+	int n = strlen(num);
+	int s = 0;
+	for (int i = 0; i < 30; i++) big[i] = 0;
+	for (int i = 0; i < n + dots; i++) {
+		char tmp = num[n - i - 1 + dots];
+		if (tmp == '.') {
+			s++;
 		}
+		else {
+			big[i] = tmp - '0';
+		}
+	}
+	for (int i = 0; i < dots; i++) {
+		big[i] = 0;
 	}
 }
 
 int main() {
-	char number1[DIGITS + 1] = {0};
-	char number2[DIGITS + 1] = {0};
-	char result[DIGITS + 1] = {0};
-	int num1[DIGITS] = { 0 };
-	int num2[DIGITS] = { 0 };
-	scanNum(&number1);
-	scanNum(&number2);
-	//printf("num1: %s\nnum2: %s\nmode: %d", number1, number2, mode);
-	scanFromString(&num1, &number1);
-	scanFromString(&num2, &number2);
-	switch (mode) {
-	case 1:
-		add(&num1, &num2);
-		break;
-	case 2:
-		sub(&num1, &num2);
-		break;
+	char num1_chr[31], num2_chr[31];
+	char input[100];
+	int num1[100] = { 0 }, num2[100] = { 0 };
+	int dots1, dots2;
+	scanf_s("%s", &num1_chr, 30);
+	scanf_s("%s", &num2_chr, 30);
+	dots1 = findDotsPos(&num1_chr);
+	dots2 = findDotsPos(&num2_chr);
+	int max_dots = max(dots1, dots2);
+	int min_dots = min(dots1, dots2);
+	printf("Dots:%d, ", max_dots);
+	scanNumChar(&num1_chr, &num1, max_dots - dots1);
+	scanNumChar(&num2_chr, &num2, max_dots - dots2);
+	//printf("%d", findDotsPos(&input));
+	for (int i = 0; i < 30; i++) {
+		printf("%d ", num2[i]);
 	}
-	int i = DIGITS - 1;
-	while (num1[i] == 0 && i > 0) i--;
-	while (i >= 0) printf("%d", num1[i--]);
 	return 0;
 }
