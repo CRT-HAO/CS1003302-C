@@ -1,0 +1,3 @@
+﻿  main.c
+D:\計算機程式設計\c\C110MID01\C110MID01Q06\main.c(11,19): warning C4013: 'strlen' undefined; assuming extern returning int
+  C110MID01Q06.vcxproj -> D:\計算機程式設計\c\C110MID01\x64\Debug\C110MID01Q06.exe

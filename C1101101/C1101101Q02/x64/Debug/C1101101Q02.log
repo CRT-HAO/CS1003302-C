@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\m8317\VS_NTUST_Tests\C1101101\C1101101Q02\main.c(17,9): warning C4013: 'sort' 未定義; 假設 extern 傳回整數
+  C1101101Q02.vcxproj -> C:\Users\m8317\VS_NTUST_Tests\C1101101\x64\Debug\C1101101Q02.exe

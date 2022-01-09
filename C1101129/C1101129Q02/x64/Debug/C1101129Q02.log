@@ -1,0 +1,23 @@
+﻿  main.c
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(29,1): warning C4267: '正在初始化': 將 'size_t' 轉換為 'int'，資料可能遺失
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(58,18): warning C4047: '函式': 'char *' 與 'char (*)[101]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(58,10): warning C4024: 'scanNum': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(59,18): warning C4047: '函式': 'char *' 與 'char (*)[101]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(59,10): warning C4024: 'scanNum': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(61,22): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(61,17): warning C4024: 'scanFromString': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(61,32): warning C4047: '函式': 'char *' 與 'char (*)[101]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(61,24): warning C4024: 'scanFromString': 型式和實質參數 2 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(62,22): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(62,17): warning C4024: 'scanFromString': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(62,32): warning C4047: '函式': 'char *' 與 'char (*)[101]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(62,24): warning C4024: 'scanFromString': 型式和實質參數 2 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(65,12): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(65,7): warning C4024: 'add': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(65,19): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(65,14): warning C4024: 'add': 型式和實質參數 2 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(68,12): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(68,7): warning C4024: 'sub': 型式和實質參數 1 不同的類型
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(68,19): warning C4047: '函式': 'int *' 與 'int (*)[100]' 間接取值的層級不同
+C:\Users\m8317\VS_NTUST_Tests\C1101129\C1101129Q02\main.c(68,14): warning C4024: 'sub': 型式和實質參數 2 不同的類型
+  C1101129Q02.vcxproj -> C:\Users\m8317\VS_NTUST_Tests\C1101129\x64\Debug\C1101129Q02.exe
